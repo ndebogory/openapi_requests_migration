@@ -6,7 +6,7 @@ OPENAPI_GENERATOR_IGNORE_PATH = .openapi-generator-ignore
 
 .gen-deps:
 	@if ! (test -f bin/openapi-generator-cli.jar) ; then\
-		wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/6.3.0/openapi-generator-cli-6.3.0.jar -O bin/openapi-generator-cli.jar;\
+		wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/4.3.1/openapi-generator-cli-4.3.1.jar -O bin/openapi-generator-cli.jar;\
 	fi
 
 PETSTORE_CLIENT_PATH=${CLIENTS_BASE_FOLDER}/petstore/
@@ -19,6 +19,6 @@ generate-client:
 		--enable-post-process-file \
 		-g python \
 		-o . \
-		--additional-properties=generateSourceCodeOnly,packageName=${CLIENTS_PACKAGE_NAME_PREFIX}.petstore
+		--additional-properties=generateSourceCodeOnly,packageName=${CLIENTS_PACKAGE_NAME_PREFIX}.petstore,withXml=False
 
 generate: .gen-deps generate-client
