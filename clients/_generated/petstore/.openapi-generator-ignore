@@ -1,0 +1,15 @@
+*.yml
+.gitignore
+*.sh
+*.md
+api/*
+docs/*
+go.mod
+go.sum
+test/*
+test-requirements.txt
+requirements.txt
+tox.ini
+setup.py
+setup.cfg
+__init__.py
