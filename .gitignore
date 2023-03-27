@@ -1,2 +1,4 @@
 bin/
 .idea/
+.openapi-generator/
+.pytest_cache/
